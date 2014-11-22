@@ -9,7 +9,7 @@
     <script src="./main.js"></script>
     <style type="text/css">
         body {
-            /*background-color: #f0f;*/
+            background-color: rgba(111, 161, 189, 1);
         }
         .container {
             width: 90%;
@@ -24,11 +24,16 @@
         .box {
             padding-bottom: 33%;
             height: 0;
-            /*border: 1px solid black;*/
+            border: 4px solid black;
+            box-shadow: inset 0 0 0 6px orange,
+                        inset 0 0 0 12px black;
             /*border-radius: 20px;*/
         }
         .col1, .col2 {
             border-right: 1px solid black;
+        }
+        .innerBox {
+            /*border: 3px solid blue;*/
         }
     </style>
 </head>
@@ -37,7 +42,7 @@
         <div class="row"><h1>Tic Tac Toe</h1></div>
         <div class="row row1">
             <div class="col-xs-4 box col1" id="1">
-                <span class="fa fa-camera-retro"></span>
+                <span class="innerbox fa fa-camera-retro"></span>
             </div>
             <div class="col-xs-4 box col2" id="2">
                 <span class="fa fa-camera-retro"></span>
