@@ -1,0 +1,536 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"function",
+				"function ${0:function_name} (argument){\n	/* body... */\n}"
+			],
+			[
+				"quer",
+				"querySelector(${0:selectors})	Element"
+			],
+			[
+				"alert",
+				"alert(${0:message})	Window"
+			],
+			[
+				"getI",
+				"getItemsByAuthor(itemData, author)"
+			],
+			[
+				"itemsBy",
+				"itemsBySony	[]"
+			],
+			[
+				"it",
+				"itemsBySony	[]"
+			],
+			[
+				"getItemsBy",
+				"getItemsByBrand(itemData, brand)"
+			],
+			[
+				"get",
+				"getItems()"
+			],
+			[
+				"getIt",
+				"getItemsByBrand(itemData, brand)"
+			],
+			[
+				"getItem",
+				"getItemsByAuthor(itemData, author)"
+			],
+			[
+				"availab",
+				"availability"
+			],
+			[
+				"p",
+				"push(newelt)"
+			],
+			[
+				"ite",
+				"itemsByBrand	[]"
+			],
+			[
+				"cons",
+				"console.log('$0');"
+			],
+			[
+				"crea",
+				"createdBy"
+			],
+			[
+				"Play",
+				"PlayersList"
+			],
+			[
+				"Sel",
+				"selectedPlayer"
+			],
+			[
+				"Sessio",
+				"Session.get	Meteor: Session.get(key)"
+			],
+			[
+				"pla",
+				"playerName"
+			],
+			[
+				"play",
+				"playerName"
+			],
+			[
+				"Pla",
+				"PlayersList"
+			],
+			[
+				"id",
+				"id=  (attribute)"
+			],
+			[
+				"Sess",
+				"Session.get	Meteor: Session.get(key)"
+			],
+			[
+				"selected",
+				"selectedPlayer"
+			],
+			[
+				"player",
+				"playerScore  (variable)"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"Ses",
+				"Session.get	Meteor: Session.get(key)"
+			],
+			[
+				"S",
+				"Session.get	Meteor: Session.get(key)"
+			],
+			[
+				"ev",
+				"events	Meteor: Template.myTemplate.events(eventMap)"
+			],
+			[
+				"if",
+				"if	if"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 556,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 2151,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 166.0,
+		"selected_items":
+		[
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"dash",
+				"DashDoc: invoke Dash with selected word"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"gitad",
+				"Git: Add..."
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"syn she",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"pac",
+				"Package Control: Disable Package"
+			],
+			[
+				"ind",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"pack list",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"COM",
+				"Toggle Comment"
+			],
+			[
+				"LINT",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"LIN",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"INS",
+				"Package Control: Install Package"
+			],
+			[
+				"IN",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Convert Case: Upper Case"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"theem",
+				"QuickThemes: next"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 253.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/phoward/Code/ga/homework/04_tictactoe"
+	],
+	"file_history":
+	[
+		"/Users/phoward/Code/ga/homework/02_js_functions/google_shopping_func.js",
+		"/Users/phoward/Code/ga/homework/04_tictactoe/form_notes.js",
+		"/Users/phoward/.zshrc",
+		"/Users/phoward/Code/ga/homework/02_js_functions/examples.js",
+		"/Users/phoward/Code/ga/homework/02_js_functions/README.md",
+		"/Users/phoward/Code/ga/homework/01_jscontrol_flow/grade.js",
+		"/Users/phoward/Code/ga/homework/01_jscontrol_flow/filterLongWords.js",
+		"/Users/phoward/Code/ga/homework/01_jscontrol_flow/temp.js",
+		"/Users/phoward/Code/ga/exercises/google_products/google_shopping.js",
+		"/Users/phoward/Documents/Cloud/Dropbox/Mackup/.oh-my-zsh/lib/aliases.zsh",
+		"/Users/phoward/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/phoward/Library/Application Support/MobileSync/README_ExternalBackupInstructions",
+		"/Users/phoward/Documents/Cloud/Dropbox/Mackup/.oh-my-zsh/plugins/meteor/_meteor",
+		"/Users/phoward/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/phoward/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".\"\n",
+			"());",
+			"increment"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2151,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 43.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 182.0
+	},
+	"project": "tictactoe.sublime-project",
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
