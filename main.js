@@ -4,12 +4,7 @@ document.addEventListener('DOMContentLoaded', function (){
     var anyBox = document.querySelectorAll(".box");
     console.log(anyBox);
 
-    for (var i = 0; i < anyBox.length; i++) {
-
-    }
-
-
-    document.addEventListener('click', function() {
+    anybox.addEventListener('click', function() {
         alert('BOOM!')
     })
 
