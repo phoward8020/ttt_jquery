@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function (){
     var anyBox = document.querySelectorAll(".box");
     console.log(anyBox);
 
-    anybox.addEventListener('click', function() {
+    anyBox[0].addEventListener('touchstart', function() {
         alert('BOOM!')
     })
 
