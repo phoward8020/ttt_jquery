@@ -4,7 +4,7 @@ var claimSquare = function (squareToClaim) {
     turnCounter += 1;
     console.log(turnCounter);
 
-    if (turnCounter % 2 = 0) {
+    if (turnCounter % 2 === 0) {
         // claim for O
     } else {
         // claim for X
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
     anyBox[0].addEventListener('click', function(){
         claimSquare();
+        document.querySelector(#1).
     });
 
 });
