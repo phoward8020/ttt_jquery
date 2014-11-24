@@ -39,6 +39,7 @@ function printGameBoardToConsole() {
 };
 
 function resetGame() {
+    // reset model layer
     gameSettings = [    gameOver = false,
                         gameResult = "",
                         turnCounter = 0,
@@ -63,6 +64,13 @@ function resetGame() {
                                     [6, 4, 2]
                                  ]
                     ];
+    // reset interface
+    for ( i = 0 ; i < squares.length ; i++ ) {
+        document.querySelector("#box" + [i]).classList.remove("fa-circle-o");
+        document.querySelector("#box" + [i]).classList.remove("fa-times");
+    };
+
+    // log result
     console.log('Game has been reset.');
     printGameBoardToConsole();
 };
@@ -86,8 +94,7 @@ function isGameOver(lastSquareClaimed) {
                  squares[triads[i][2]].claimedBy === currentPlayer()) {
                     // currentPlayer wins
                     gameOver = true;
-                    gameResult = 'Game Over. Team ' + currentPlayer() + 
-                    ' roolz.'
+                    gameResult = 'Game Over. Team ' + currentPlayer() + ' roolz.'
                     return;
                 }
         }
@@ -147,19 +154,6 @@ function claimSquare(squareToClaim) {
 // can't do shit with the DOM 'til it's loaded, bitches
 document.addEventListener('DOMContentLoaded', function (){
     
-//     // when the DOM finishes loading, we'll need to set up an
-//     // event listener for touches/clicks in the field of play
-
-//     // a touch in a box means a player wants to claim a square 
-//     // for themselves. therefore: run claimSquare function.
-//     // this func should:
-//     //  - initially just put an X or an O in the box, depending
-//     //      on whose turn it is
-//     //  - after that works, need to add logic to check for 
-//     //      previous claims
-
-//     // should also have a reset function, triggered by a listener
-//     //  on a button somewhere.
     var square0 = document.querySelector("#square0");
     square0.addEventListener('click', function(){
         claimSquare(0);
@@ -197,15 +191,12 @@ document.addEventListener('DOMContentLoaded', function (){
         claimSquare(8);
     });
 
-
+    var resetButton = document.querySelector("#reset");
+    resetButton.addEventListener('click', function(){
+        resetGame();
+    });
 
 //     var boxes = document.querySelectorAll(".box");
-
-// //     // ????????????????????????????????????????????????????????????
-// //     //  can I combine the click and touchstart listeners?
-// //     // boxes[0].addEventListener('touchstart', function() {
-// //     //     claimSquare()
-// //     // });
 
 //     for ( var i = 0 ; i < 9 ; i++ ) {
 //         console.log('Adding event listener to boxNum ' + i);
