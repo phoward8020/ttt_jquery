@@ -127,6 +127,7 @@ function claimSquare(squareToClaim) {
     availableSquares -= 1;
 
     // claim square (update model; update view; log to console; check for gameOver condition)
+    // TODO: Refactor - this 'if' can be eliminated using currentPlayer()
     if (turnCounter % 2 === 0) {
         // claim for 'O': 
         squares[squareToClaim].claimedBy = "O";
@@ -153,7 +154,7 @@ function claimSquare(squareToClaim) {
 
 // can't do shit with the DOM 'til it's loaded, bitches
 document.addEventListener('DOMContentLoaded', function (){
-    
+
     var square0 = document.querySelector("#square0");
     square0.addEventListener('click', function(){
         claimSquare(0);
