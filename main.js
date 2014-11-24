@@ -1,4 +1,6 @@
 // Set up gameSettings[] as global variable
+// TODO: refactor - change gameSettings to object to keep window object clean, 
+//          update all refs to values using dot notation
 var gameSettings = [    gameOver = false,
                         gameResult = "",
                         turnCounter = 0,

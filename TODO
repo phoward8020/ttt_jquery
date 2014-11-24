@@ -1,0 +1,7 @@
+TODO
+
+- Complete model/controller (game playable on console alone)
+- Complete view for xs size (non-touch)
+- Add touch
+- Add media queries
+- work on next larger sizes
