@@ -1,0 +1,32 @@
+body {
+    background-color: rgba(111, 161, 189, 1);
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.col-xs-2 {
+}
+.row1 .box, .row2 .box {
+    border-bottom: 1px solid black;
+}
+.box {
+    padding-bottom: 33%;
+    height: 0;
+    border: 4px solid black;
+    box-shadow: inset 0 0 0 6px orange,
+                inset 0 0 0 12px black;
+}
+.col1, .col2 {
+    border-right: 1px solid black;
+}
+.innerbox {
+    color: white;
+    padding-top: 45%;
+}
+.fa-circle-o {
+    font-size: 280%;
+}
+.fa-times {
+    font-size: 300%;
+}

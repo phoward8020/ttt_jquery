@@ -68,8 +68,14 @@ function resetGame() {
                     ];
     // reset interface
     for ( i = 0 ; i < squares.length ; i++ ) {
-        document.querySelector("#box" + [i]).classList.remove("fa-circle-o");
-        document.querySelector("#box" + [i]).classList.remove("fa-times");
+        
+        // busted-ass old school javascript way:
+        // document.querySelector("#box" + [i]).classList.remove("fa-circle-o");
+        // document.querySelector("#box" + [i]).classList.remove("fa-times");
+
+        // new jQuery hotness:
+        $("#box" + [i]).removeClass('fa-circle-o fa-times');
+
     };
 
     // log result
@@ -111,16 +117,17 @@ function isGameOver(lastSquareClaimed) {
     return false;
 };
 
-function claimSquare(squareToClaim) {
+function claimSquare(event) {
+    var squareToClaim = event.data.squareToClaim;
     // exit if gameOver or square already claimed
     if (gameOver) {
         console.log('Current game is over. Type resetGame() to start again.');
         return;
     }; 
     if (squares[squareToClaim].claimedBy !== "_") {
-        console.log('ERROR: Cannot claim square ' + squares[squareToClaim].squareNum + 
-                    '. Square was already claimed by ' + squares[squareToClaim].claimedBy +
-                    'on turn ' + squares[squareToClaim].onTurn + '.');
+        console.log('ERROR: Cannot claim square ' + squares[event.data.squareToClaim].squareNum + 
+                    '. Square was already claimed by ' + squares[event.data.squareToClaim].claimedBy +
+                    'on turn ' + squares[event.data.squareToClaim].onTurn + '.');
         return;
     } 
 
@@ -128,21 +135,14 @@ function claimSquare(squareToClaim) {
     turnCounter += 1;
     availableSquares -= 1;
 
-    // claim square (update model; update view; log to console; check for gameOver condition)
-    // TODO: Refactor - this 'if' can be eliminated using currentPlayer()
-    if (turnCounter % 2 === 0) {
-        // claim for 'O': 
-        squares[squareToClaim].claimedBy = "O";
-        squares[squareToClaim].onTurn = turnCounter;
-        document.querySelector("#box" + squareToClaim).classList.add("fa-circle-o");
-        console.log('Square ' + squareToClaim + " claimed for Team O.");
-    } else {
-        // claim for 'X'
-        squares[squareToClaim].claimedBy = "X";
-        squares[squareToClaim].onTurn = turnCounter;
-        document.querySelector("#box" + squareToClaim).classList.add("fa-times");
-        console.log('Square ' + squareToClaim + " claimed for Team X.")
-    };
+    var playerIcon;
+    currentPlayer() === "X" ? playerIcon = "fa-times" : playerIcon = "fa-circle-o";
+
+    squares[squareToClaim].claimedBy = currentPlayer();
+    squares[squareToClaim].onTurn = turnCounter;
+    $("#box" + squareToClaim).addClass(playerIcon);
+    console.log('Square ' + squareToClaim + " claimed for Team " + currentPlayer() + ".");
+
     printGameBoardToConsole();
     isGameOver(squareToClaim);
     if (gameOver) {
@@ -152,60 +152,28 @@ function claimSquare(squareToClaim) {
     }
 };
 
+function flashySquares(event) {
+    $(this)
+        .toggle("pulsate")
+        .toggle("pulsate")
+        .animate({
+            opacity: 0.15},
+            100)
+        .animate({
+            opacity: 1.0},
+            100);
+    };
 
+// kickin' it jQuery style.
+$(function(){
 
-// can't do shit with the DOM 'til it's loaded, bitches
-document.addEventListener('DOMContentLoaded', function (){
+    // On page load, reset everything
+    resetGame();
 
-    var square0 = document.querySelector("#square0");
-    square0.addEventListener('click', function(){
-        claimSquare(0);
-    });
-    var square1 = document.querySelector("#square1");
-    square1.addEventListener('click', function(){
-        claimSquare(1);
-    });
-    var square2 = document.querySelector("#square2");
-    square2.addEventListener('click', function(){
-        claimSquare(2);
-    });
-    var square3 = document.querySelector("#square3");
-    square3.addEventListener('click', function(){
-        claimSquare(3);
-    });
-    var square4 = document.querySelector("#square4");
-    square4.addEventListener('click', function(){
-        claimSquare(4);
-    });
-    var square5 = document.querySelector("#square5");
-    square5.addEventListener('click', function(){
-        claimSquare(5);
-    });
-    var square6 = document.querySelector("#square6");
-    square6.addEventListener('click', function(){
-        claimSquare(6);
-    });
-    var square7 = document.querySelector("#square7");
-    square7.addEventListener('click', function(){
-        claimSquare(7);
-    });
-    var square8 = document.querySelector("#square8");
-    square8.addEventListener('click', function(){
-        claimSquare(8);
-    });
+    for ( var i = 0 ; i < squares.length ; i++ ) {
+        $('#square' + i).on('click', {squareToClaim : i}, claimSquare);
+    };
 
-    var resetButton = document.querySelector("#reset");
-    resetButton.addEventListener('click', function(){
-        resetGame();
-    });
-
-//     var boxes = document.querySelectorAll(".box");
-
-//     for ( var i = 0 ; i < 9 ; i++ ) {
-//         console.log('Adding event listener to boxNum ' + i);
-//         document.querySelector("#box" + i).addEventListener('click', function() {
-//             claimSquare(i); // << boxNum changes globally each iteration, so we can only update box8
-//         });
-//     };
-});
-
+    $('#reset').on('click', resetGame);
+    $('.box').on('click', flashySquares);
+})
